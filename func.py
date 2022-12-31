@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import random as rn 
+import os
 
 class rpc:
     list_object=["paper","rock","scissor"]
@@ -11,12 +12,12 @@ class rpc:
         choice=rn.choice(rpc.list_object)
         return choice
     def user_answer(self):
-        answer=input("pleas enter you choices : ")
+        answer=input("pleas enter you choices(h | help) : ")
         return answer
     def compare(self):
         while True:
             pc=rpc.choice_object(self)
-            user=rpc.user_answer(self)
+            user=rpc.user_answer(self)  
             if pc == user :
                 print("equal")
             elif pc == "paper" and user == "rock":
@@ -34,12 +35,26 @@ class rpc:
             elif pc == "scissor" and user == "rock":
                 rpc.user_score+=1
                 print("user win")
-            elif user== "exit":
-                break
             elif pc == "scissor" and user == "paper":
                 rpc.pc_score+=1
                 print("pc win")
+            elif user== "exit":
+                break
+            elif user == "help" or user == "h":
+                txt="""
+                this rock paper scissor game
+                rock 
+                paper 
+                scissor
+                exit   this comand exit the program 
+                score   show the score of the player
+                """
+                print(txt)
+            elif user == "score":
+                print("you: ",rpc.user_score,"--","pc: ",rpc.pc_score)
+        
             else:
+                print("this command is not found")
                 
         
         
