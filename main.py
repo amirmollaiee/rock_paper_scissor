@@ -41,12 +41,12 @@ class rpc:
                 break
             elif user == "help" or user == "h":
                 txt="""
-                this rock paper scissor game
+                this is rock paper scissor game
                 rock 
                 paper 
                 scissor
-                exit   this comand exit the program 
-                score   show the score of the player
+                exit   this comand exit  program 
+                score   show  score of players
                 """
                 print(txt)
             elif user == "score":
