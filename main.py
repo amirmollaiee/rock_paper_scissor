@@ -11,7 +11,7 @@ class rpc:
         choice=rn.choice(rpc.list_object)
         return choice
     def user_answer(self):
-        answer=input("pleas enter you choices : ")
+        answer=input("pleas enter you choices(h|help) : ")
         return answer
     def compare(self):
         while True:
